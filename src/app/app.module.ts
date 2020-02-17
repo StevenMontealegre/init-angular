@@ -9,6 +9,10 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { ProductsComponent } from './products/products.component';
 import { HighlightDirective } from './highlight.directive';
+import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
+import { ProductComponent } from './product/product.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { HighlightDirective } from './highlight.directive';
     FooterComponent,
     HeaderComponent,
     ProductsComponent,
-    HighlightDirective
+    HighlightDirective,
+    HomeComponent,
+    ContactComponent,
+    ProductComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

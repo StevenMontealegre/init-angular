@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./banner.component.scss']
 })
 export class BannerComponent implements OnInit {
-
-  number1 = 1;
-  number2 = 10;
-  result: number = this.number1 + this.number2;
-  nombre = 'James Montealegre';
+  images: string[] = [
+    './assets/images/banner-1.jpg',
+    './assets/images/banner-2.jpg',
+    './assets/images/banner-3.jpg'
+  ] ;
 
   constructor() { }
 

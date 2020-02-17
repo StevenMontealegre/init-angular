@@ -1,0 +1,12 @@
+:host {
+    padding: 5px;
+}
+// Cualquier elemento a que este dentro del nav
+nav > a {
+    padding: 5px;
+    text-decoration: none;
+}
+// La nevación del nav que esté activa que cambie de color
+nav > a.active {
+    background-color: greenyellow;
+}

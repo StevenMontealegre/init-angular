@@ -1,8 +1,2 @@
-<!-- Se aplica el estilo global al div (class="product-grid") que contiene todos los componentes -->
-<div class="product-grid">
-    <app-products
-    *ngFor= "let product of products"
-    (AddItemEvent)='AddItemComponent($event)'
-    [product] = 'product'>
-    </app-products>
-</div>
+<!-- Esta etiqueta habilita la navegación entre las distintas rutas -->
+<router-outlet></router-outlet>
