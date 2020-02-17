@@ -1,0 +1,16 @@
+// Sólo tiene dominio dentro del componente 
+
+// Para hacer tratamiento a todo el componente los elementos que se estan renderizando deberían
+// estar dentro de un div, pero la etiqueta del componente ya crea uno, luego, para no crear 
+// otro se utiliza la palabra host para referenciar
+:host {
+    border: 1px solid black;
+    margin: 2px;
+    border-radius: 5px;
+    display: block;
+}
+
+img {
+    max-width: 100%;
+
+}

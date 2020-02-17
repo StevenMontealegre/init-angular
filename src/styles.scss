@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+// Reiniciar estilos del navegador, estos son los estilos globales
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+// Responsive
+@media(min-width: 576px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

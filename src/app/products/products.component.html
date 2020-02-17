@@ -1,7 +1,6 @@
-<ul>
-    <li *ngFor= "let product of products">
-        {{product.title}}
-        <img [src]="product.image" alt="">
-    <strong>{{product.price}}</strong>
-    </li> 
-</ul>
+<h3 appHighlight >{{ product.title | uppercase }}</h3>
+<img [src]="product.image" alt="">
+<strong>{{ product.price  | currency}}</strong>
+<p>{{ product.description | slice:0:20 }}</p>
+<!-- Estado inicial del botón, invoca al método AddItemMethod() -->
+<button (click)="addItemMethod()">Añadir al carrito</button>

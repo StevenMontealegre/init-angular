@@ -8,6 +8,7 @@ import { BannerComponent } from './banner/banner.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { ProductsComponent } from './products/products.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ProductsComponent } from './products/products.component';
     BannerComponent,
     FooterComponent,
     HeaderComponent,
-    ProductsComponent
+    ProductsComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
