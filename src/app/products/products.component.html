@@ -4,3 +4,6 @@
 <p>{{ product.description | slice:0:20 }}</p>
 <!-- Estado inicial del botón, invoca al método AddItemMethod() -->
 <button (click)="addItemMethod()">Añadir al carrito</button>
+<!-- Ir al detalle del producto se le pasa un array para concatenar
+toda la ruta y para sacar de manera dinámica el id -->
+<button [routerLink]="['/products', product.id]">Ver detalle</button>
