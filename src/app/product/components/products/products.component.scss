@@ -3,14 +3,26 @@
 // Para hacer tratamiento a todo el componente los elementos que se estan renderizando deberían
 // estar dentro de un div, pero la etiqueta del componente ya crea uno, luego, para no crear 
 // otro se utiliza la palabra host para referenciar
-:host {
-    border: 1px solid black;
-    margin: 2px;
-    border-radius: 5px;
-    display: block;
-}
-
-img {
-    max-width: 100%;
-
+// :host {
+//    border: 1px solid black;
+//    margin: 2px;
+//   border-radius: 5px;
+//    display: block;
+//}
+// img {
+//    max-width: 100%;
+// }
+// ESTRUCTURA DEL CARD DE LA APLICACIÓN
+.crop-image{
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 100%;
+    }
 }

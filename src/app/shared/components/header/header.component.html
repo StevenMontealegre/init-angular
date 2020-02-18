@@ -1,5 +1,5 @@
 <!-- Se utiliza "nav" para crear barras de navegación -->
-<nav>
+
     <!-- Elementos link clickeables -->
     <!-- <a href="/products">Products</a> 
     Mejor utilizar routerLink para no refrescar toda la página al 
@@ -7,8 +7,18 @@
 
     <!-- routerLinkActive se usa para conocer que ventana está activa 
     dentro del nav -->
-    <a routerLink="/home" routerLinkActive="active">Home</a>
-    <a routerLink="/products" routerLinkActive="active">Products</a>
-    <a routerLink="/contact" routerLinkActive="active">Contact</a>
-
-</nav>
+    <mat-toolbar >
+        <mat-toolbar-row>
+            <div class="row between-xs middle-xs header-row">
+                <nav>
+                    <a mat-button routerLink="/home" routerLinkActive="active">Home</a>
+                    <a mat-button routerLink="/products" routerLinkActive="active">Products</a>
+                    <a mat-button routerLink="/contact" routerLinkActive="active">Contact</a>
+                </nav>
+                    <a mat-raised-button matBadge="4" matBadgeColor="warn">
+                        <mat-icon>add_shopping_cart</mat-icon>
+                        Carrito </a>
+                
+            </div>
+        </mat-toolbar-row>
+         </mat-toolbar>

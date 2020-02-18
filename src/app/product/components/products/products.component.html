@@ -1,9 +1,28 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{ product.title | uppercase }}</mat-card-title>
+        <mat-card-subtitle>{{ product.price | currency}}</mat-card-subtitle>
+    </mat-card-header>
+    <div class="crop-image">
+        <img [src]="product.image" alt="">
+    </div>
+    <mat-card-content>
+        <p>{{ product.description | slice:0:20 }}</p>
+    </mat-card-content>
+    <mat-card-actions> 
+        <button (click)="addItemMethod()" mat-stroked-button color="accent" >Añadir al carrito</button>
+        <button [routerLink]="['/products', product.id]" mat-stroked-button color="primary" >Ver detalle</button>
+    </mat-card-actions>
+</mat-card>
+
+<!-- Primera implementación 
 <h3 appHighlight >{{ product.title | uppercase }}</h3>
 <img [src]="product.image" alt="">
 <strong>{{ product.price  | currency}}</strong>
-<p>{{ product.description | slice:0:20 }}</p>
-<!-- Estado inicial del botón, invoca al método AddItemMethod() -->
-<button (click)="addItemMethod()">Añadir al carrito</button>
-<!-- Ir al detalle del producto se le pasa un array para concatenar
-toda la ruta y para sacar de manera dinámica el id -->
-<button [routerLink]="['/products', product.id]">Ver detalle</button>
+<p>{{ product.description | slice:0:20 }}</p> -->
+<!-- Estado inicial del botón, invoca al método AddItemMethod() 
+<button (click)="addItemMethod()" mat-stroked-button color="accent" >Añadir al carrito</button>
+Ir al detalle del producto se le pasa un array para concatenar
+toda la ruta y para sacar de manera dinámica el id 
+<button [routerLink]="['/products', product.id]" mat-stroked-button color="primary" >Ver detalle</button>
+-->
