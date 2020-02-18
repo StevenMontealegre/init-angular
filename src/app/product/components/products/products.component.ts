@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 // Importamos la interface
-import { Product } from '../product.model';
+import { Product } from './../../../product.model';
 
 @Component({
   selector: 'app-products',
