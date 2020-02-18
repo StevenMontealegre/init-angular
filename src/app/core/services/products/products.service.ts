@@ -1,5 +1,7 @@
+// Servicio encargado de contener los productos y exponerlos
+
 import { Injectable } from '@angular/core';
-import { Product } from './product.model';
+import { Product } from './../../../product.model';
 
 @Injectable({
   providedIn: 'root'

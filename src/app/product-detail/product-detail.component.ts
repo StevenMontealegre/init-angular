@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 // Inyección de datos, de dependencia y de tipado
 import { ActivatedRoute, Params} from '@angular/router';
-import { ProductsService } from './../products.service';
+import { ProductsService } from './../core/services/products/products.service';
 import { Product } from './../product.model';
 
 @Component({

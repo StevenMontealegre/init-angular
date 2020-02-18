@@ -1,3 +1,5 @@
+// Este componente es modular y cuenta con lazy loading
+
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import Swiper from 'swiper';
 
