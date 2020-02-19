@@ -28,12 +28,20 @@ export class ProductDetailComponent implements OnInit {
     // En conclusión se obtiene el id de la ruta (ruta/id)
     this.route.params.subscribe((params: Params) => {
       // Se obtiene un objeto json solo se requiere el id en este caso
-      const id = params.id;
+    const id = params.id;
 
       // Obtener el producto ya que se tiene la instancia (*) del servicio que contiene
       // ese método const product no está dentro del dominio del template
-      this.product = this.productsService.findProduct(id);
+      // this.product = this.productsService.findProduct(id);
+    this.fetchProduct(id);
 
+    });
+
+  }
+  fetchProduct(id: string) {
+    this.productsService.getProduct(id)
+    .subscribe(product => {
+      this.product = product;
     });
 
   }

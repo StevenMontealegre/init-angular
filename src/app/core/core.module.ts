@@ -15,7 +15,7 @@ import { ProductsService } from './services/products/products.service';
   imports: [
     CommonModule
   ],
-  // De esta manera queda en todo el core del proyecto cuando se importa en el 
+  // De esta manera queda en todo el core del proyecto cuando se importa en el
   // appmodule
   providers: [
     ProductsService

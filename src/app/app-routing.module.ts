@@ -43,6 +43,12 @@ const routes: Routes = [
     ]
   },
   {
+    path: 'admin',
+    // canActivate: [AdminGuard],
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+  },
+  {
+    // Este es el patch de no match, siempre va de último.
     path: '**',
     component: PageNotFoundComponent
 

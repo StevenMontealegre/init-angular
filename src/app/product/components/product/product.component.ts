@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from './../../../product.model';
+import { ProductsService } from './../../../core/services/products/products.service';
 
 @Component({
   selector: 'app-product',
@@ -8,56 +9,27 @@ import { Product } from './../../../product.model';
 })
 export class ProductComponent implements OnInit {
 
-  products: Product[] = [
-    {
-      id: '1',
-      image: './assets/images/camiseta.png',
-      title: 'Camiseta',
-      price: 45000,
-      description: 'Este es un producto de la tienda do se'
-    },
-    {
-      id: '2',
-      image: './assets/images/hoodie.png',
-      title: 'Hoodie',
-      price: 45000,
-      description: 'Este es un producto de la tienda do se'
-    },
-    {
-      id: '3',
-      image: './assets/images/mug.png',
-      title: 'Mug',
-      price: 45000,
-      description: 'Este es un producto de la tienda do se'
-    },
-    {
-      id: '4',
-      image: './assets/images/pin.png',
-      title: 'Pin',
-      price: 45000,
-      description: 'Este es un producto de la tienda do se'
-    },
-    {
-      id: '5',
-      image: './assets/images/stickers1.png',
-      title: 'Sticker 1',
-      price: 45000,
-      description: 'Este es un producto de la tienda do se'
-    },
-    {
-      id: '6',
-      image: './assets/images/stickers2.png',
-      title: 'Sticker 2',
-      price: 45000,
-      description: 'Este es un producto de la tienda do se'
+  products: Product[] = [];
+
+  constructor(
+    private productsService: ProductsService
+  ) {
+
+  }
+
+    fetchProducts() {
+      this.productsService.getProducts().subscribe(products => {
+        this.products = products;
+      });
     }
-  ];
+
     AddItemComponent(indice: number) {
       console.log('product');
       console.log(indice);
     }
 
     ngOnInit() {
-
+      // Peticiones hacia datos
+      this.fetchProducts();
     }
   }
