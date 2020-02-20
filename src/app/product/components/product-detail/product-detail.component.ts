@@ -61,5 +61,30 @@ export class ProductDetailComponent implements OnInit {
     });
   }
 
+  updateProduct() {
+    const updateProduct: Partial<Product> = {
+      id: '44s4dfdf444',
+      title: 'Actualizado desde Angular',
+      image: 'assets/images/banner-2.jpg',
+      price: 119000,
+      description: 'hermoso objeto'
+
+    };
+    this.productsService.updateProduct('6', updateProduct)
+    .subscribe(product => {
+      console.log(product);
+    });
+
+  }
+
+  deleteProduct() {
+    this.productsService.deleteProduct('6')
+    .subscribe(rta => {
+      console.log(rta);
+    });
+
+  }
+
+
 
 }
