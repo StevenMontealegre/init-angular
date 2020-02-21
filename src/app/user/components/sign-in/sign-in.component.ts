@@ -27,7 +27,7 @@ export class SignInComponent implements OnInit {
       const value = this.form.value;
       this.authService.createUser(value.email, value.password)
       .then(() => {
-        this.router.navigate(['/user']);
+        this.router.navigate(['/user/signIn']);
       });
     }
   }
