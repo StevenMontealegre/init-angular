@@ -1,6 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 // Importamos la interface
 import { Product } from './../../../product.model';
+// Servicio Observable
+import { CartService } from '../../../core/services/cart.service';
 
 @Component({
   selector: 'app-products',
@@ -21,9 +23,16 @@ export class ProductsComponent implements OnInit {
     console.log('Producto añadido');
     // Así se realiza la transferencia de información con el método emit
     // En este caso se está "transmitiendo" el id del producto
-    this.AddItemEvent.emit(this.product.id);
+    // this.AddItemEvent.emit(this.product.id);
+
+    // Agrega productos al carro.
+    this.cartService.addCart(this.product);
   }
-  constructor() { }
+  constructor(
+    // inyección de dependencia, es decir se van a hacer uso de las variables
+    // y métodos de ese componente
+    private cartService: CartService
+  ) { }
 
   ngOnInit(): void {
   }
