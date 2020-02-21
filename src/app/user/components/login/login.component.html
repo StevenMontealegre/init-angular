@@ -1,0 +1,34 @@
+ <form [formGroup]="form" >
+
+    <mat-card class="full-width">
+
+        <mat-card-header>
+            <mat-card-title> Ingreso </mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field>
+                        <input placeholder="correo electrónico" formControlName="email" matInput type="text">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field>
+                        <input placeholder="contraseña" formControlName="password" matInput type="text">
+                    </mat-form-field>
+                </div>
+            </div>
+            <a routerLink="signIn">¿No está registrado?</a>
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button [disabled]="form.invalid" mat-raised-button type="submit" color="primary">Aceptar</button>
+        </mat-card-actions>
+
+    </mat-card>
+
+</form>   
+    

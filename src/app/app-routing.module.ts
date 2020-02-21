@@ -48,6 +48,11 @@ const routes: Routes = [
     loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
   },
   {
+    path: 'user',
+    loadChildren: () => import('./user/user.module').then(m => m.UserModule)
+
+  },
+  {
     // Este es el patch de no match, siempre va de último.
     path: '**',
     component: PageNotFoundComponent

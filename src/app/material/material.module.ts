@@ -23,6 +23,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatSortModule,
     MatGridListModule,
     MatMenuModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatCheckboxModule
   ],
   exports: [
     // El componente que utilice este diseño debe importar MaterialModule
@@ -63,7 +65,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatSortModule,
     MatGridListModule,
     MatMenuModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatCheckboxModule
   ]
 })
 export class MaterialModule { }
