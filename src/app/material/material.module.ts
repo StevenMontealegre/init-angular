@@ -24,6 +24,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatStepperModule } from '@angular/material/stepper';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatGridListModule,
     MatMenuModule,
     MatFormFieldModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatStepperModule
   ],
   exports: [
     // El componente que utilice este diseño debe importar MaterialModule
@@ -66,7 +68,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatGridListModule,
     MatMenuModule,
     MatFormFieldModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatStepperModule
   ]
 })
 export class MaterialModule { }

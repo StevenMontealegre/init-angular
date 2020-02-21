@@ -11,6 +11,7 @@ const routes: Routes = [
     component: LayoutComponent,
     // Dependencia de los demás componentes, en este caso layout renderiza
     // no solo su componente sino los otros también
+    // Todos tienen el mismo layout y el mismo footer
     children: [
       {
         // cuando la url no está compuesta redirecciona al home
@@ -38,6 +39,11 @@ const routes: Routes = [
         path: 'contact',
         // canActivate: [AdminGuard],
         component: ContactComponent
+
+      },
+      {
+        path: 'order',
+        loadChildren: () => import('./order/order.module').then(m => m.OrderModule)
 
       },
     ]

@@ -14,9 +14,9 @@
                     <a mat-button routerLink="/home" routerLinkActive="active">Home</a>
                     <a mat-button routerLink="/products" routerLinkActive="active">Products</a>
                     <a mat-button routerLink="/contact" routerLinkActive="active">Contact</a>
-                    <a mat-button routerLink="/user" routerLinkActive="active">LogIn</a>
+                    <a mat-raised-button color="warn" routerLink="/user" routerLinkActive="active" class= "align">Ingrese</a>
                 </nav>
-                    <a mat-raised-button [matBadge]="total" matBadgeColor="warn">
+                    <a mat-raised-button routerLink="/order" [matBadge]="total$ | async" matBadgeColor="warn">
                         <mat-icon>add_shopping_cart</mat-icon>
                         Carrito </a>
                 

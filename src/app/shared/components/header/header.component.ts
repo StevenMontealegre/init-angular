@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../../core/services/cart.service';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 // Componente que escucha dinamicamente (observable)
 
 @Component({
@@ -8,16 +10,17 @@ import { CartService } from '../../../core/services/cart.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  total = 0;
+
+  total$: Observable<number>;
 
   constructor(
     private cartService: CartService
   ) {
-    // Escucha los cambios del observable
-    this.cartService.cart$.subscribe(products => {
-      console.log(products);
-      this.total = products.length;
-    });
+    // Escucha los cambios del observable sin subscribirse
+    this.total$ = this.cartService.cart$
+    .pipe(
+      map(products => products.length)
+    );
   }
 
   ngOnInit(): void {
