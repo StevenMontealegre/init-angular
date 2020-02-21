@@ -36,7 +36,7 @@ const routes: Routes = [
       // }
       {
         path: 'contact',
-        canActivate: [AdminGuard],
+        // canActivate: [AdminGuard],
         component: ContactComponent
 
       },

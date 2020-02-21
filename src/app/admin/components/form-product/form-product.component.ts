@@ -45,7 +45,7 @@ export class FormProductComponent implements OnInit {
       id: ['', Validators.required],
       title: ['', Validators.required],
       price: ['', Validators.required],
-      image: ['', Validators.required],
+      image: [''],
       description: ['', Validators.required]
     });
   }
